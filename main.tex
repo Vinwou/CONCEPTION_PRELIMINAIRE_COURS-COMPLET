@@ -1,0 +1,612 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 3.1 (February 18, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s indexstyle.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, % Default font size, select one of 10pt, 11pt or 12pt
+	fleqn, % Left align equations
+	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
+	%oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+]{LegrandOrangeBook}
+
+
+
+% Book information for PDF metadata, remove/comment this block if not required 
+\hypersetup{
+	pdftitle={Title}, % Title field
+	pdfauthor={Author}, % Author field
+	pdfsubject={Subject}, % Subject field
+	pdfkeywords={Keyword1, Keyword2, ...}, % Keywords
+	pdfcreator={LaTeX}, % Content creator field
+}
+
+\addbibresource{sample.bib} % Bibliography file
+
+\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
+
+\chapterimage{orange1.jpg} % Chapter heading image
+\chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{ % Title(s) and author(s)
+		\centering\sffamily % Font styling
+		{\Huge\bfseries Cours de conception préliminaire pour BTS CPRP\\ Sciences industrielles de l'ingénieur\par} % Book title
+		\vspace{16pt} % Vertical whitespace
+		{\LARGE Guide pratique\par} % Subtitle
+		\vspace{24pt} % Vertical whitespace
+		{\huge\bfseries \par} % Author name
+	}
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty} % Suppress headers and footers on this page
+
+~\vfill % Push the text down to the bottom of the page
+
+\noindent Copyright \copyright\ 2022 Vincent Chevalier\\ % Copyright notice
+
+\noindent \textsc{Published by \LaTeX OverLeaf}\\ % Publisher
+
+\noindent \textsc{\href{https://www.latextemplates.com/template/legrand-orange-book}{book-website.com}}\\ % URL
+\noindent
+Crédit : Template original codé par Vel Gayevskiy (vel@latextemplates.com) et Mathias Legrand (legrand.mathias@gmail.com). Sous licence Creative Commons Attribution-NonCommercial 4.0 License (la "Licence"). Vous ne pouvez utiliser ce fichier qu'en conformité avec la Licence. Vous pouvez obtenir une copie de la Licence à l'adresse  \url{https://creativecommons.org/licenses/by-nc-sa/4.0}. À moins que la loi applicable ne l'exige ou que cela ne fasse l'objet d'un accord écrit, le logiciel distribué sous la Licence est distribué sur une base \textsc{``en l'état'', sans garantie ni condition d'aucune sorte}, expresse ou implicite. Voir la Licence pour les termes spécifiques régissant les permissions et les limitations de la Licence.\\ % License information, replace this with your own license (if any)
+
+\noindent \textit{First printing, n/a} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Output the table of contents
+
+\listoffigures % Output the list of figures, comment or remove this command if not required
+
+\listoftables % Output the list of tables, comment or remove this command if not required
+
+\pagestyle{fancy} % Enable default headers and footers again
+
+\cleardoublepage % Start the following content on a new page
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Communiquer dans l'industrie}
+
+%----------------------------------------------------------------------------------------
+%	SECTIONING EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{orange2.jpg} % Chapter heading image
+\chapterspaceabove{6.75cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter{Décrypter le dessin de définition}\index{Sectioning}
+\begin{corollary}[S2.4] 
+Représentations graphiques dérivées des maquettes numériques
+\end{corollary}
+
+
+
+\section{Les normes}\index{Sectioning!Sections}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit\footnote{Footnote example text\ldots Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie.}. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.
+
+Aliquam arcu turpis, ultrices sed luctus ac, vehicula id metus. Morbi eu feugiat velit, et tempus augue. Proin ac mattis tortor. Donec tincidunt, ante rhoncus luctus semper, arcu lorem lobortis justo, nec convallis ante quam quis lectus. Aenean tincidunt sodales massa, et hendrerit tellus mattis ac. Sed non pretium nibh. Donec cursus maximus luctus. Vivamus lobortis eros et massa porta porttitor.
+
+\section{Qu'est ce qu'un dessin de définition}\index{Sectioning!Subsections}
+\subsection{Mise en plan d'une pièce}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit\footnote{Footnote example tos. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie.}. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper.
+\subsection{Les vues}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper.
+\subsection{Les coupes}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper.
+\subsection{Les dimensions}
+\begin{center}
+  \begin{tikzpicture}
+    \node (origin) at (0,0) {}; % shift relative baseline
+    \coordinate (O) at (2,3);
+    \draw[fill=gray!10] (O) circle (1);
+    \draw[fill=blue!10] (2,4.5) ellipse (23pt and 16pt); %Entourer en bleu
+    \draw[fill=red!10] (2.2,4.6) ellipse (13pt and 10pt); %Entourer en rouge
+    \draw[fill=white] (O) circle (0.75) node[below,yshift=-1.125cm] {Un anneaux pour les gouverner tous};
+    \draw[dim] (O) ++(-0.75,0) -- ++(1.5,0) node[midway,below] {$4^{\pm 0,5}$};
+    \draw[dim] (O) ++(-1,1.25) -- ++(2,0) node[midway,above] {$5^{\pm 0,2}$}; 
+    \foreach \x in {-1,1} {
+      \draw (O) ++(\x,0.25) -- ++(0,1.25);
+    }
+    \end{tikzpicture}%
+\end{center}
+
+Une {\color{blue} spécification dimensionnelle} est une dimension exprimant une grandeur linéaire ou angulaire accompagnée d’un {\color{red}intervalle de tolérance} (ici $\pm 0,2$ et $\pm 0,5$ sont les intervalles de tolérance). Une {\color{red} cote} est une spécification dimensionnelle représentant la valeur de référence à laquelle s’ajoute l’intervalle de tolérance (IT).
+
+  
+La dimension réelle de chaque pièce doit se situer entre la valeur mini et la valeur maxi. En dehors de ces deux valeurs, la dimension est hors tolérance. 
+\subsubsection{Côtes intrinsèques}
+Une spécification intrinsèque est une spécification relative à une seule surface.
+
+
+Fusce varius orci ac magna dapibus porttitor. In tempor leo a neque bibendum sollicitudin. Nulla pretium fermentum nisi, eget sodales magna facilisis eu. Praesent aliquet nulla ut bibendum lacinia. Donec vel mauris vulputate, commodo ligula ut, egestas orci. Suspendisse commodo odio sed hendrerit lobortis. Donec finibus eros erat, vel ornare enim mattis et. Donec finibus dolor quis dolor tempus consequat. Mauris fringilla dui id libero egestas, ut mattis neque ornare. Ut condimentum urna pharetra ipsum consequat, eu interdum elit cursus. Vivamus scelerisque tortor et nunc ultricies, id tincidunt libero pharetra. Aliquam eu imperdiet leo. Morbi a massa volutpat velit condimentum convallis et facilisis dolor.
+
+In hac habitasse platea dictumst. Curabitur mattis elit sit amet justo luctus vestibulum. In hac habitasse platea dictumst. Pellentesque lobortis justo enim, a condimentum massa tempor eu. Ut quis nulla a quam pretium eleifend nec eu nisl. Nam cursus porttitor eros, sed luctus ligula convallis quis. Nam convallis, ligula in auctor euismod, ligula mauris fringilla tellus, et egestas mauris odio eget diam. Praesent sodales in ipsum eu dictum. Mauris interdum porttitor fringilla. Proin tincidunt sodales leo at ornare. Donec tempus magna non mauris gravida luctus. Cras vitae arcu vitae mauris eleifend scelerisque. Nam sem sapien, vulputate nec felis eu, blandit convallis risus. Pellentesque sollicitudin venenatis tincidunt. In et ipsum libero.
+
+\subsubsection{Subsubsection Title} \index{Sectioning!Subsubsections}
+
+Maecenas consectetur metus at tellus finibus condimentum. Proin arcu lectus, ultrices non tincidunt et, tincidunt ut quam. Integer luctus posuere est, non maximus ante dignissim quis. Nunc a cursus erat. Curabitur suscipit nibh in tincidunt sagittis. Nam malesuada vestibulum quam id gravida. Proin ut dapibus velit. Vestibulum eget quam quis ipsum semper convallis. Duis consectetur nibh ac diam dignissim, id condimentum enim dictum. Nam aliquet ligula eu magna pellentesque, nec sagittis leo lobortis. Aenean tincidunt dignissim egestas. Morbi efficitur risus ante, id tincidunt odio pulvinar vitae.
+
+\paragraph{Paragraph Title}\index{Sectioning!Paragraphs} Nullam mollis tellus lorem, sed congue ipsum euismod a. Donec pulvinar neque sed ligula ornare sodales. Nulla sagittis vel lectus nec laoreet. Nulla volutpat malesuada turpis at ultricies. Ut luctus velit odio, sagittis volutpat erat aliquet vel. Donec ac neque eget neque volutpat mollis. Vestibulum viverra ligula et sapien bibendum, vel vulputate ex euismod. Curabitur nec velit velit. Aliquam vulputate lorem elit, id tempus nisl finibus sit amet. Curabitur ex turpis, consequat at lectus id, imperdiet molestie augue. Curabitur eu eros molestie purus commodo hendrerit. Quisque auctor ipsum nec mauris malesuada, non fringilla nibh viverra. Quisque gravida, metus quis semper pulvinar, dolor nisl suscipit leo, vestibulum volutpat ante justo ultrices diam. Sed id facilisis turpis, et aliquet eros.
+
+In malesuada ullamcorper urna, sed dapibus diam sollicitudin non. Donec elit odio, accumsan ac nisl a, tempor imperdiet eros. Donec porta tortor eu risus consequat, a pharetra tortor tristique. Morbi sit amet laoreet erat. Morbi et luctus diam, quis porta ipsum. Quisque libero dolor, suscipit id facilisis eget, sodales volutpat dolor. Nullam vulputate interdum aliquam. Mauris id convallis erat, ut vehicula neque. Sed auctor nibh et elit fringilla, nec ultricies dui sollicitudin. Vestibulum vestibulum luctus metus venenatis facilisis. Suspendisse iaculis augue at vehicula ornare. Sed vel eros ut velit fermentum porttitor sed sed massa. Fusce venenatis, metus a rutrum sagittis, enim ex maximus velit, id semper nisi velit eu purus.
+
+%------------------------------------------------
+
+\section*{Unnumbered Section}
+
+\subsection*{Unnumbered Subsection}
+
+\subsubsection*{Unnumbered Subsubsection}
+
+%----------------------------------------------------------------------------------------
+%	IN-TEXT ELEMENT EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapter{Nécessité de l’indication de spécifications géométriques sur les plans}
+\begin{corollary}[S6.1]
+Spécification des produits
+\end{corollary}
+
+En plus des spécifications dimensionnelles, il est nécessaire d’indiquer des spécifications géométriques pour optimiser le montage ou le fonctionnement global d’un mécanisme.
+Prenons l’exemple du rangement des pièces étalons dans leur boîte. La pièce 2 que l’on veut fabriquer a une dimension tolérancée de 20 h6.
+On remarque que les surfaces 1 et 2 doivent être perpendiculaires, sinon la pièce ne rentrera peut-être pas. Le technicien a bien fabriqué la pièce à la dimension voulue, mais la pièce possède un défaut géométrique entre les surfaces 1 et 2 (défaut de perpendicularité).
+
+\section{Symboles des spécifications géométriques}\index{Citation}
+
+This statement requires citation \cite{Smith:2022jd}; this one is more specific \cite[162]{Smith:2021qr}.
+
+%------------------------------------------------
+
+\section{Link Examples}\index{Links}
+
+This is a URL link: \href{https://www.latextemplates.com}{LaTeX Templates}. This is an email link: \href{mailto:example@example.com}{example@example.com}. This is a monospaced URL link: \url{https://www.LaTeXTemplates.com}.
+
+%------------------------------------------------
+
+\section{Lists}\index{Lists}
+
+Lists are useful to present information in a concise and/or ordered way.
+
+\subsection{Numbered List}\index{Lists!Numbered List}
+
+\begin{enumerate}
+	\item First numbered item
+	\begin{enumerate}
+		\item First indented numbered item
+		\item Second indented numbered item
+		\begin{enumerate}
+			\item First second-level indented numbered item
+		\end{enumerate}
+	\end{enumerate}
+	\item Second numbered item
+	\item Third numbered item
+\end{enumerate}
+
+\subsection{Bullet Point List}\index{Lists!Bullet Points}
+
+\begin{itemize}
+	\item First bullet point item
+	\begin{itemize}
+		\item First indented bullet point item
+		\item Second indented bullet point item
+		\begin{itemize}
+			\item First second-level indented bullet point item
+		\end{itemize}
+	\end{itemize}
+	\item Second bullet point item
+	\item Third bullet point item
+\end{itemize}
+
+\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+
+\begin{description}
+	\item[Name] Description
+	\item[Word] Definition
+	\item[Comment] Elaboration
+\end{description}
+
+%------------------------------------------------
+
+\section{International Support}
+
+àáâäãåèéêëìíîïòóôöõøùúûüÿýñçčšž
+
+\noindent ÀÁÂÄÃÅÈÉÊËÌÍÎÏÒÓÔÖÕØÙÚÛÜŸÝÑ
+
+\noindent ßÇŒÆČŠŽ
+
+%------------------------------------------------
+
+\section{Ligatures}
+
+fi fj fl ffl ffi Ty
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Pourquoi ça casse ?}
+
+%----------------------------------------------------------------------------------------
+%	MATHEMATICS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapter{Dessiner des mécanismes}
+\begin{corollary}[S3.1.1]
+Cinématique des liaisons mécaniques
+\end{corollary}
+
+
+
+\section{Paramétrer les mécanismes}\index{Theorems}
+
+\subsection{Several equations}\index{Theorems!Several Equations}
+
+This is a theorem consisting of several equations.
+
+\begin{theorem}[Name of the theorem] % Specify a name/title in square brackets, or leave them out for no title
+	In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+	\begin{align}
+		& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+		&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+	\end{align}
+\end{theorem}
+
+\subsection{Single Line}\index{Theorems!Single Line}
+
+This is a theorem consisting of just one line.
+
+\begin{theorem} % Specify a name/title in square brackets, or leave them out for no title
+	A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+\end{theorem}
+
+%------------------------------------------------
+
+\section{Élaborer un schéma cinématique}\index{Definitions}
+
+A definition can be mathematical or it could define a concept.
+
+\begin{definition}[Definition name] % Specify a name/title in square brackets, or leave them out for no title
+	Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
+	\begin{align}
+		& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
+		& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
+		& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
+	\end{align}
+\end{definition}
+
+%------------------------------------------------
+
+\section{Mouvement entre les solides}\index{Notations}
+\begin{corollary}[S3] 
+\begin{itemize}
+    \item S3.2 Mouvements relatifs entre solides dans le cas d'une translation ou d'une rotation autour d'un axe fixe;
+    \item S3.3 Mouvements plans.
+\end{itemize}
+
+\end{corollary}
+
+
+
+\begin{notation} % Specify a name/title in square brackets, or leave them out for no title
+	Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+	\begin{enumerate}
+		\item Bounded support $G$;
+		\item Infinitely differentiable;
+	\end{enumerate}
+	a vector space is denoted by $\mathcal{D}(G)$. 
+\end{notation}
+
+%------------------------------------------------
+
+\section{Statisme d'un système}\index{Remarks}
+
+This is an example of a remark.
+
+\begin{remark}
+    On termine ce chapitre en éveillant le lecteur aux qualités respectives de l’isostatisme
+et de l’hyperstatisme :
+
+• pour une fonction mécanique souhaitée, une structure isostatique est plus écono-
+mique qu’une structure hyperstatique ;
+
+• une structure hyperstatique est plus rigide qu’une structure isostatique.
+
+En effet, les contraintes géométriques mises en évidence dans le cas de l’hyperstatis-
+me induisent soit une qualité de fabrication plus grande, soit la mise en place de
+
+réglages sur le mécanisme. On sait tout à fait réaliser et l’un, et l’autre, mais cela a un
+coût. En conclusion, on peut dire que l’hyperstatisme est un choix réfléchi qu’il est
+nécessaire de financer quand les critères de performances ne sont pas atteints avec une
+structure équivalente isostatique.
+Chercher à rendre une structure isostatique est une activité qui sollicite l’imagination
+et que l’on illustre sur un exemple.
+\end{remark}
+
+%------------------------------------------------
+
+\section{Matériaux \& traitement}\index{Corollaries}
+\begin{corollary}[S4.1]
+Structure et caractéristiques des matériaux
+\end{corollary}
+
+%------------------------------------------------
+
+\section{Propositions}\index{Propositions}
+
+\subsection{Several equations}\index{Propositions!Several Equations}
+
+\begin{proposition}[Proposition name] % Specify a name/title in square brackets, or leave them out for no title
+	It has the properties:
+	\begin{align}
+		& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+		&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+	\end{align}
+\end{proposition}
+
+\subsection{Single Line}\index{Propositions!Single Line}
+
+\begin{proposition} % Specify a name/title in square brackets, or leave them out for no title
+	Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+\end{proposition}
+
+%------------------------------------------------
+
+\section{Examples}\index{Examples}
+
+\subsection{Equation Example}\index{Examples!Equation}
+
+\begin{example} % Specify a name/title in square brackets, or leave them out for no title
+	Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+	\begin{equation}
+	f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+	& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+	\end{equation}
+	The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\mathopen{]}0\,;5/2-\sqrt{2}\mathclose{[}$.
+\end{example}
+
+\subsection{Text Example}\index{Examples!Text}
+
+\begin{example}[Example name] % Specify a name/title in square brackets, or leave them out for no title
+	Aliquam arcu turpis, ultrices sed luctus ac, vehicula id metus. Morbi eu feugiat velit, et tempus augue. Proin ac mattis tortor. Donec tincidunt, ante rhoncus luctus semper, arcu lorem lobortis justo, nec convallis ante quam quis lectus. Aenean tincidunt sodales massa, et hendrerit tellus mattis ac. Sed non pretium nibh. Donec cursus maximus luctus. Vivamus lobortis eros et massa porta porttitor.
+\end{example}
+
+%------------------------------------------------
+
+\section{Exercises}\index{Exercises}
+
+\begin{exercise} % Specify a name/title in square brackets, or leave them out for no title
+	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+\end{exercise}
+
+%------------------------------------------------
+
+\section{Problems}\index{Problems}
+
+\begin{problem} % Specify a name/title in square brackets, or leave them out for no title
+	What is the average airspeed velocity of an unladen swallow?
+\end{problem}
+
+%------------------------------------------------
+
+\section{Vocabulary}\index{Vocabulary}
+
+Define a word to improve a students' vocabulary.
+
+\begin{vocabulary}[Word] % Specify a name/title in square brackets, or leave them out for no title
+	Definition of word.
+\end{vocabulary}
+
+
+
+
+\part{Concevoir un produit}
+
+%----------------------------------------------------------------------------------------
+%	MATHEMATICS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapter{Gestion de projet}
+\begin{corollary}[S1.3]
+Compétitivité des produits industriels
+\end{corollary}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{orange3.jpg} % Chapter heading image
+\chapterspaceabove{6.25cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter{Chapitre}
+
+\begin{corollary}[S6.1]
+Spécification des produits
+\end{corollary}
+
+\begin{table}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the table on the page
+	\begin{tabular}{L{0.15\textwidth} R{0.15\textwidth} R{0.15\textwidth}} % Specify column alignment with L{width}, C{width} and R{width} for fixed-width columns, or the default latex l, c and r for flexible-width columns
+		\toprule
+		\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+		\midrule
+		Treatment 1 & 0.0003262 & 0.562 \\
+		Treatment 2 & 0.0015681 & 0.910 \\
+		Treatment 3 & 0.0009271 & 0.296 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Table caption.}
+	\label{tab:example} % Unique label used for referencing the table in-text
+\end{table}
+
+Referencing \autoref{tab:example} in-text using its label.
+
+\begin{table}[t] % Floating table, [t] tells LaTeX to place it at the top of the next available page
+	\centering % Horizontally center the table on the page
+	\begin{tabular}{L{0.15\textwidth} R{0.15\textwidth} R{0.15\textwidth}} % Specify column alignment with L{width}, C{width} and R{width} for fixed-width columns, or the default latex l, c and r for flexible-width columns
+		\toprule
+		\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+		\midrule
+		Treatment 1 & 0.0003262 & 0.562 \\
+		Treatment 2 & 0.0015681 & 0.910 \\
+		Treatment 3 & 0.0009271 & 0.296 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Floating table.}
+	\label{tab:floating} % Unique label used for referencing the table in-text
+\end{table}
+
+%------------------------------------------------
+
+\section{Figure}\index{Figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.5\textwidth]{creodocs_logo.pdf} % Include the figure image
+	\caption{Figure caption.}
+	\label{fig:placeholder} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Referencing \autoref{fig:placeholder} in-text using its label.
+
+\begin{figure}[b] % Floating figure, [b] tells LaTeX to place it at the bottom of the next available page
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=\textwidth]{creodocs_logo.pdf} % Include the figure image
+	\caption{Floating figure.}
+	\label{fig:floating} % Unique label used for referencing the figure in-text
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+
+\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapterimage{} % Chapter heading image
+\chapterspaceabove{2.5cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{2cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter*{Bibliography}
+\markboth{\sffamily\normalsize\bfseries Bibliography}{\sffamily\normalsize\bfseries Bibliography} % Set the page headers to display a Bibliography chapter name
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
+
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles} % Add the Articles subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=article] % Output article bibliography entries
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books} % Add the Books subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=book] % Output book bibliography entries
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES
+%----------------------------------------------------------------------------------------
+
+\chapterimage{orange2.jpg} % Chapter heading image
+\chapterspaceabove{6.75cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+\begin{appendices}
+
+\renewcommand{\chaptername}{Appendix} % Change the chapter name to Appendix, i.e. "Appendix A: Title", instead of "Chapter A: Title" in the headers
+
+%------------------------------------------------
+
+\chapter{Appendix Chapter Title}
+
+\section{Appendix Section Title}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget est euismod pretium.
+
+%------------------------------------------------
+
+\chapter{Appendix Chapter Title}
+
+\section{Appendix Section Title}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget est euismod pretium.
+
+%------------------------------------------------
+
+\end{appendices}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
