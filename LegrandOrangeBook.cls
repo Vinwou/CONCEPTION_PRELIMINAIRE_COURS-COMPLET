@@ -741,3 +741,5 @@
 \tikzstyle{dim}    = [latex-latex]
 \tikzstyle{axis}   = [-latex,black!55]
 \usetikzlibrary{shapes}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shadows.blur}
